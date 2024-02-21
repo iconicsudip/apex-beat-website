@@ -1,7 +1,36 @@
-import { ConfigProvider, Layout } from "antd";
-import { Outlet } from "react-router-dom";
+import { Button, ConfigProvider, Layout } from "antd";
+import { Link, Outlet } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { useEffect, useState } from "react";
+import useResponsive from "./utils/useResponsive";
+import { Squash as Hamburger } from "hamburger-react";
 
 function App() {
+  const [headerChange, setHeaderChange] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false)
+  const {isTablet,isMobile} = useResponsive()
+  useEffect(() => {
+    const handleScroll = () => {
+      const headerHeight = 96; // Change this value to your header height
+      if (window.scrollY > headerHeight) {
+        setHeaderChange(true);
+      } else {
+        setHeaderChange(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const handleToggleMenu = () => {
+    setMenuOpen(!menuOpen)
+  }
+
   return (
     <div className="App">
       <ConfigProvider
@@ -22,7 +51,67 @@ function App() {
       >
         <Layout style={{ minHeight: "100vh" }}>
           <Layout>
-            <Layout.Header>Apex Beat</Layout.Header>
+            <div className={`header-wrapper ${headerChange ? 'bg-primary' : ''}`}>
+              <Layout.Header>
+                <div className={`header`}>
+                  <img src="https://via.placeholder.com/60" alt="" />
+                  {isTablet || isMobile ? 
+                    <>
+                      <Hamburger toggled={menuOpen} size={24} color={headerChange ? "white" : "var(--gray-800)"} onToggle={handleToggleMenu}/>
+                      <div className={`sider_menus ${headerChange ? 'bg-primary' : ''} ${menuOpen ? 'menu_open' : 'menu_close'}`}>
+                        <ul className="menus">
+                          <li>
+                            <Link to="/">Home</Link>
+                          </li>
+                          <li>
+                            <a href="#about">About</a>
+                          </li>
+                          <li>
+                            <a href="#services">Services</a>
+                          </li>
+                          <li>
+                            <a href="#specialists">Specialists</a>
+                          </li>
+                          <li>
+                            <a href="#testimonials">Testimonials</a>
+                          </li>
+                          <li>
+                            <a href="#contact">Contact</a>
+                          </li>
+                        </ul>
+                        <div className="sider_btn">
+                          <Button block className="book_btn" style={{ margin: 0 }} type={headerChange ? "default" : "primary"} >Book an appointment</Button>
+                        </div>
+                      </div>
+                    </>
+                  : 
+                    <>
+                      <ul className="menus">
+                        <li>
+                          <Link to="/">Home</Link>
+                        </li>
+                        <li>
+                          <a href="#about">About</a>
+                        </li>
+                        <li>
+                          <a href="#services">Services</a>
+                        </li>
+                        <li>
+                          <a href="#specialists">Specialists</a>
+                        </li>
+                        <li>
+                          <a href="#testimonials">Testimonials</a>
+                        </li>
+                        <li>
+                          <a href="#contact">Contact</a>
+                        </li>
+                      </ul>
+                      <Button className="book_btn" style={{ margin: 0 }} type={headerChange ? "default" : "primary"} >Book an appointment</Button>
+                    </>
+                  }
+                </div>
+              </Layout.Header>
+            </div>
             <Layout.Content>
               <Outlet />
             </Layout.Content>

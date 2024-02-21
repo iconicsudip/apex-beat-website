@@ -44,7 +44,7 @@ export default function FacilitiesSection() {
   }, [])
   return (
     <div className={styles.facilities}>
-      <div className="col-lg-6">
+      <div className="col-md-6">
         <div className={styles.left_wrapper}>
           <div className={styles.header}>
             <h1 className={styles.title}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
@@ -64,7 +64,7 @@ export default function FacilitiesSection() {
           </div>
         </div>
       </div>
-      <div className="col-lg-6">
+      <div className="col-md-6">
         <div className={styles.right_wrapper}>
           <img src={facilities[currentFacility - 1].rightContent.image} alt="Facility" />
           <p className={styles.description}>{facilities[currentFacility - 1].rightContent.content}</p>

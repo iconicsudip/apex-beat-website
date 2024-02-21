@@ -1,6 +1,7 @@
 import Marquee from 'react-fast-marquee'
 import Specialist from '../../../../components/Specialist'
 import styles from './specialists-section.module.scss'
+import useResponsive from '../../../../utils/useResponsive'
 
 const specialists = [
   {
@@ -39,8 +40,9 @@ const specialists = [
 ]
 
 export default function SpecialistsSection() {
+  const {isMobile} = useResponsive()
   return (
-    <div className={styles.specialists}>
+    <div id="specialists" className={styles.specialists}>
       <div className="heading">
         <h2 className='title'>
           Our Specialists
@@ -51,7 +53,7 @@ export default function SpecialistsSection() {
       </div>
       <div className={styles.body}>
         <Marquee pauseOnHover className={styles.marquee}
-          gradient
+          gradient={isMobile ? false : true}
           gradientColor='#ffffff'
 
         >
@@ -60,9 +62,8 @@ export default function SpecialistsSection() {
             const minimumSizeDescription = specialists.reduce((acc, current) => {
               return acc.description.length < current.description.length ? acc : current
             })
-            console.log(minimumSizeDescription.description.length)
             return (
-              <Specialist specialist={specialist} key={index} maxLength={90} />
+              <Specialist specialist={specialist} key={index} maxLength={minimumSizeDescription.description.length} />
             )
           })}
         </Marquee>

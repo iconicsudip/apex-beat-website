@@ -1,0 +1,29 @@
+.aboutSection{
+    padding: 46px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+        .about{
+            display: flex;
+            flex-wrap: wrap;
+            .about_image{
+                width: 100%;
+                border-radius: 8px;
+                display: flex;
+                position: relative;
+                img{
+                    width: 100%;
+                    border-radius: 8px;
+                    position: relative;
+                    z-index: 2;
+                }
+                
+            }
+            .desc{
+                font-size: 1.2em;
+                font-weight: 400;
+                color: var(--gray-600);
+            }
+        }
+}

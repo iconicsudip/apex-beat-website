@@ -29,7 +29,7 @@ export default function ServicesSection() {
     ]
     return (
 
-        <div className={styles.servicesSection}>
+        <div id="services" className={styles.servicesSection}>
             <div className="heading">
                 <h2 className='title'>Our Services</h2>
                 <p className='desc'>
