@@ -1,0 +1,69 @@
+.specialist {
+    margin: 0 12px;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    overflow: hidden;
+    background: white;
+
+    a {
+        text-decoration: none;
+        color: var(--gray-800);
+        display: block;
+    }
+
+    .name {
+        font-size: 1.5em;
+        color: var(--gray-800);
+    }
+
+    .specialty {
+        color: var(--gray-600);
+        font-size: 1em;
+    }
+
+    .desc {
+        font-size: 0.9em;
+        color: var(--gray-600);
+        margin-top: 8px;
+        width: 300px;
+
+        .see_more {
+            color: var(--blue-500);
+            font-weight: 600;
+            cursor: pointer;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        // border-radius: 8px;
+    }
+
+    .doctor {
+        display: flex;
+        gap: 24px;
+        flex-direction: column;
+        padding: 24px 20px;
+        padding-top: 12px;
+    }
+
+    .degree {
+        display: flex;
+        gap: 4px;
+        flex-wrap: wrap;
+
+        .badge {
+            display: flex;
+            width: max-content;
+            padding: 0.2em 1em;
+            background: var(--blue-50);
+            border-radius: 24px;
+            font-size: 1em;
+            font-weight: 600;
+            color: var(--blue-600);
+            display: flex;
+        }
+    }
+}

@@ -30,10 +30,15 @@ export default function ServicesSection() {
     return (
 
         <div className={styles.servicesSection}>
-            <h2 className="heading">Our Services</h2>
+            <div className="heading">
+                <h2 className='title'>Our Services</h2>
+                <p className='desc'>
+                    We offer a wide range of services to meet your health needs.
+                </p>
+            </div>
             <div className={styles.services}>
                 {services.map((service: I_Service, index) => (
-                    <Service service={service} key={index}/>
+                    <Service service={service} key={index} />
                 ))}
             </div>
             <Alert

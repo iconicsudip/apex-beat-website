@@ -31,7 +31,7 @@ export default function HeroSection() {
                     <h1 className={styles.title}>Welcome to the best medical center</h1>
                     <p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.</p>
                 </div>
-                <Button className={styles.book_btn} type="primary">Book an appointment</Button>
+                <Button className="book_btn" type="primary">Book an appointment</Button>
                 <ul className={styles.offers}>
                     {offers.map(offer => (
                         <li key={offer.id}>
@@ -46,7 +46,7 @@ export default function HeroSection() {
                     <img src="https://via.placeholder.com/500" alt="Medical center" />
                 </div>
             </div>
-            
+
         </div>
     )
 }
