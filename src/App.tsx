@@ -60,24 +60,36 @@ function App() {
                       <Hamburger toggled={menuOpen} size={24} color={headerChange ? "white" : "var(--gray-800)"} onToggle={handleToggleMenu}/>
                       <div className={`sider_menus ${headerChange ? 'bg-primary' : ''} ${menuOpen ? 'menu_open' : 'menu_close'}`}>
                         <ul className="menus">
-                          <li>
-                            <Link to="/">Home</Link>
-                          </li>
-                          <li>
-                            <a href="#about">About</a>
-                          </li>
-                          <li>
-                            <a href="#services">Services</a>
-                          </li>
-                          <li>
-                            <a href="#specialists">Specialists</a>
-                          </li>
-                          <li>
-                            <a href="#testimonials">Testimonials</a>
-                          </li>
-                          <li>
-                            <a href="#contact">Contact</a>
-                          </li>
+                          <Link to="/">
+                            <li>
+                              Home
+                            </li>
+                          </Link>
+                          <a href="#about">
+                            <li>
+                              About
+                            </li>
+                          </a>
+                          <a href="#services">
+                            <li>
+                              Services
+                            </li>
+                          </a>
+                          <a href="#specialists">
+                            <li>
+                              Specialists
+                            </li>
+                          </a>
+                          <a href="#testimonials">
+                            <li>
+                              Testimonials
+                            </li>
+                          </a>
+                          <a href="#contact">
+                            <li>
+                              Contact
+                            </li>
+                          </a>
                         </ul>
                         <div className="sider_btn">
                           <Button block className="book_btn" style={{ margin: 0 }} type={headerChange ? "default" : "primary"} >Book an appointment</Button>
@@ -87,24 +99,36 @@ function App() {
                   : 
                     <>
                       <ul className="menus">
-                        <li>
-                          <Link to="/">Home</Link>
-                        </li>
-                        <li>
-                          <a href="#about">About</a>
-                        </li>
-                        <li>
-                          <a href="#services">Services</a>
-                        </li>
-                        <li>
-                          <a href="#specialists">Specialists</a>
-                        </li>
-                        <li>
-                          <a href="#testimonials">Testimonials</a>
-                        </li>
-                        <li>
-                          <a href="#contact">Contact</a>
-                        </li>
+                        <Link to="/">
+                          <li>
+                            Home
+                          </li>
+                        </Link>
+                        <a href="#about">
+                          <li>
+                            About
+                          </li>
+                        </a>
+                        <a href="#services">
+                          <li>
+                            Services
+                          </li>
+                        </a>
+                        <a href="#specialists">
+                          <li>
+                            Specialists
+                          </li>
+                        </a>
+                        <a href="#testimonials">
+                          <li>
+                            Testimonials
+                          </li>
+                        </a>
+                        <a href="#contact">
+                          <li>
+                            Contact
+                          </li>
+                        </a>
                       </ul>
                       <Button className="book_btn" style={{ margin: 0 }} type={headerChange ? "default" : "primary"} >Book an appointment</Button>
                     </>
