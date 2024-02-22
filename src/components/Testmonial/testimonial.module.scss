@@ -1,0 +1,53 @@
+.testimonial {
+    max-width: 500px;
+    width: 100%;
+    margin: auto;
+
+    .testimonialContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .testimonialText {
+            font-size: 1.3em;
+            color: var(--gray-700);
+            margin: 16px 0;
+            text-align: center;
+        }
+
+        .testimonialAuthor {
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .testimonialAuthorName{
+        font-size: 1.3em;
+            }
+            .testimonialAuthorTitle{
+        font-size: 0.8em;
+        color: var(--blue-600);
+        font-weight: 500;
+            }
+        }
+
+        .testimonialAuthorImage {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .testimonialAuthorInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

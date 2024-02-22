@@ -51,14 +51,14 @@ function App() {
       >
         <Layout style={{ minHeight: "100vh" }}>
           <Layout>
-            <div className={`header-wrapper ${headerChange ? 'bg-primary' : ''}`}>
+            <div className={`header-wrapper ${headerChange}`}>
               <Layout.Header>
                 <div className={`header`}>
                   <img src="https://via.placeholder.com/60" alt="" />
                   {isTablet || isMobile ? 
                     <>
-                      <Hamburger toggled={menuOpen} size={24} color={headerChange ? "white" : "var(--gray-800)"} onToggle={handleToggleMenu}/>
-                      <div className={`sider_menus ${headerChange ? 'bg-primary' : ''} ${menuOpen ? 'menu_open' : 'menu_close'}`}>
+                      <Hamburger toggled={menuOpen} size={24} color={"var(--gray-800)"} onToggle={handleToggleMenu}/>
+                      <div className={`sider_menus ${menuOpen ? 'menu_open' : 'menu_close'}`}>
                         <ul className="menus">
                           <Link to="/">
                             <li>
@@ -92,7 +92,7 @@ function App() {
                           </a>
                         </ul>
                         <div className="sider_btn">
-                          <Button block className="book_btn" style={{ margin: 0 }} type={headerChange ? "default" : "primary"} >Book an appointment</Button>
+                          <Button block className="book_btn" style={{ margin: 0 }} type={"primary"} >Book an appointment</Button>
                         </div>
                       </div>
                     </>
@@ -130,7 +130,7 @@ function App() {
                           </li>
                         </a>
                       </ul>
-                      <Button className="book_btn" style={{ margin: 0 }} type={headerChange ? "default" : "primary"} >Book an appointment</Button>
+                      <Button className="book_btn" style={{ margin: 0 }} type={"primary"} >Book an appointment</Button>
                     </>
                   }
                 </div>

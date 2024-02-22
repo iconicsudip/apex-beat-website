@@ -5,6 +5,7 @@ import FacilitiesSection from './components/FacilitiesSection';
 import SpecialistsSection from './components/SpecialistsSection';
 import TestimonialsSection from './components/TestimonialsSection';
 import AboutSection from './components/AboutSection';
+import ContactSection from './components/ContactSection';
 import { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 
@@ -21,7 +22,7 @@ export default function Home() {
             <FacilitiesSection />
             <SpecialistsSection />
             <TestimonialsSection />
-            {/* <ContactSection /> */}
+            <ContactSection />
         </div>
     )
 }

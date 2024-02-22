@@ -288,6 +288,9 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
+body{
+  overflow-x: hidden;
+}
 
 h1 {
   font-size: 2em;
@@ -661,6 +664,26 @@ header {
       transition: width 0.3s ease-in-out;
       overflow: hidden;
 }
+.slick-slider{
+  width: 100%;
+}
+.slick-dots{
+  bottom: -40px;
+}
+.slick-dots li button:before{
+  font-size: 16px;
+}
+.slick-dots li.slick-active button:before{
+  color: var(--blue-700);
+  opacity: 1;
+}
+.slick-dots li button:before{
+  color: var(--gray-400);
+}
+.slick-dots li button:hover:before,
+.slick-dots li button:focus:before{
+  color: var(--blue-700);
+}
 .sider_menus .menus{
   flex-direction: column;
   gap: 0;
@@ -708,18 +731,20 @@ header {
 }
 
 .heading {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: max-content;
-  position: relative;
-  padding: 0 0.8em;
-  margin-bottom: 1.5em;
+      display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding: 0 0.8em;
+        margin-bottom: 1.5em;
+        max-width: 24rem;
 }
 
 .heading .title {
   font-size: 2.5em;
   color: var(--gray-800);
+  text-align: center;
 }
 
 .heading .desc {

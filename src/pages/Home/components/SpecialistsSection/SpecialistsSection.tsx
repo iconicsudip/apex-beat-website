@@ -1,7 +1,6 @@
-import Marquee from 'react-fast-marquee'
 import Specialist from '../../../../components/Specialist'
 import styles from './specialists-section.module.scss'
-import useResponsive from '../../../../utils/useResponsive'
+import Slider from 'react-slick'
 
 const specialists = [
   {
@@ -40,7 +39,45 @@ const specialists = [
 ]
 
 export default function SpecialistsSection() {
-  const {isMobile} = useResponsive()
+  const minimumSizeDescription = specialists.reduce((acc, current) => {
+    return acc.description.length < current.description.length ? acc : current
+  })
+  const settings = {
+    dots: true,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 2000,
+    autoplaySpeed: 2000,
+    pauseOnHover: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   return (
     <div id="specialists" className={styles.specialists}>
       <div className="heading">
@@ -52,21 +89,14 @@ export default function SpecialistsSection() {
         </p>
       </div>
       <div className={styles.body}>
-        <Marquee pauseOnHover className={styles.marquee}
-          gradient={isMobile ? false : true}
-          gradientColor='#ffffff'
-
-        >
-
+        <Slider {...settings}>
           {specialists.map((specialist, index) => {
-            const minimumSizeDescription = specialists.reduce((acc, current) => {
-              return acc.description.length < current.description.length ? acc : current
-            })
+            
             return (
               <Specialist specialist={specialist} key={index} maxLength={minimumSizeDescription.description.length} />
             )
           })}
-        </Marquee>
+        </Slider>
       </div>
     </div>
   )
