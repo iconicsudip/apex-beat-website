@@ -139,6 +139,53 @@ function App() {
             <Layout.Content>
               <Outlet />
             </Layout.Content>
+            <Layout.Footer>
+              <div className="footer">
+                  <div className="footerContent">
+                    <div className="col-lg-3 col-md-6">
+                      <h3 className="footerHeader">Company</h3>
+                      <ul>
+                        <li>About</li>
+                        <li>Services</li>
+                        <li>Specialists</li>
+                        <li>Testimonials</li>
+                        <li>Contact</li>
+                      </ul>
+                    </div>
+                    <div className="col-lg-3 col-md-6">
+                      <h3 className="footerHeader">Services</h3>
+                      <ul>
+                        <li>Cardiology</li>
+                        <li>Dentistry</li>
+                        <li>Neurology</li>
+                        <li>Orthopedics</li>
+                        <li>Urology</li>
+                      </ul>
+                    </div>
+                    <div className="col-lg-3 col-md-6">
+                      <h3 className="footerHeader">Specialists</h3>
+                      <ul>
+                        <li>Dr. John Doe</li>
+                        <li>Dr. Jane Doe</li>
+                        <li>Dr. Richard Roe</li>
+                        <li>Dr. Sarah Roe</li>
+                        <li>Dr. Michael Smith</li>
+                      </ul>
+                    </div>
+                    <div className="col-lg-3 col-md-6">
+                      <h3 className="footerHeader">Contact</h3>
+                      <ul>
+                        <li>Address: 1234 Street Name, City Name, United States</li>
+                        <li>Phone: +123 456 7890</li>
+                        <li>Email: test@gmail.com</li>
+                      </ul>
+                    </div>
+                  </div>
+                <div className="footerCopy">
+                  <p>© {new Date().getFullYear()} Your Company. All Rights Reserved</p>
+                </div>
+              </div>
+            </Layout.Footer>
           </Layout>
         </Layout>
       </ConfigProvider>

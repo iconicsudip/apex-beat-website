@@ -770,3 +770,22 @@ header {
   height: auto;
   padding: 0.8em 2.4em;
 }
+.footer{
+  display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+}
+.footer ul{
+  list-style: none;
+  margin-top: 12px;
+}
+.footerCopy{
+  padding: 24px;
+    text-align: center;
+    border-top: 1px solid var(--gray-200);
+    margin-top: 2em;
+}
+.footerHeader{
+  font-size: 1.5em;
+    color: var(--blue-800);
+}
