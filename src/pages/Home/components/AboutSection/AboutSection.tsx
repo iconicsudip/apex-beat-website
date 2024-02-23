@@ -1,5 +1,6 @@
 import { Button } from 'antd'
 import styles from './about-section.module.scss'
+import about from '../../../../assets/about.png'
 
 export default function AboutSection() {
   return (
@@ -13,7 +14,7 @@ export default function AboutSection() {
           <div className={styles.about}>
               <div className="col-md-6">
                 <div className={styles.about_image}>
-                    <img src="https://via.placeholder.com/500"  />
+                    <img src={about}  />
                 </div>
               </div>
               <div className="col-md-6">

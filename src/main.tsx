@@ -5,6 +5,7 @@ import App from "./App.tsx";
 import "./index.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Home from "./pages/Home/Home.tsx";
+import SpecialistDetails from "./components/SpecialistDetails";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home/>
+      },
+      {
+        path: "/specialists/:slug",
+        element: <SpecialistDetails/>
       }
     ],
   },

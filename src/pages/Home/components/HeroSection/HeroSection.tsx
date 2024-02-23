@@ -2,6 +2,7 @@ import { Button } from 'antd'
 import styles from './hero-section.module.scss'
 import { TbCircleCheckFilled } from 'react-icons/tb'
 import { nanoid } from 'nanoid'
+import DoctorHeroImage from '../../../../assets/Doctors-hero.png'
 
 export default function HeroSection() {
     const offers = [
@@ -43,7 +44,7 @@ export default function HeroSection() {
             </div>
             <div className="col-md-6">
                 <div className={styles.heroSection}>
-                    <img src="https://via.placeholder.com/500" alt="Medical center" />
+                    <img src={DoctorHeroImage} alt="Medical center" />
                 </div>
             </div>
 

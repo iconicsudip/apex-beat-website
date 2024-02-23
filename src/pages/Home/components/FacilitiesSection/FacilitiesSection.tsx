@@ -1,6 +1,9 @@
 import { useEffect, useState } from 'react'
 import Facility from '../../../../components/Facility'
 import styles from './facilities-section.module.scss'
+import qualfiedDoctors from '../../../../assets/doctor2.png'
+import bestService from '../../../../assets/doctor1.png'
+import affordableFees from '../../../../assets/doctor3.png'
 import { Button } from 'antd'
 
 const facilities = [
@@ -9,7 +12,7 @@ const facilities = [
     title: 'Qualified Doctors',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.',
     rightContent: {
-      image: 'https://via.placeholder.com/500',
+      image: qualfiedDoctors,
       content: 'Right content for qualified doctors facility. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.'
     }
   },
@@ -18,7 +21,7 @@ const facilities = [
     title: 'Affordable Fees',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.',
     rightContent: {
-      image: 'https://via.placeholder.com/500',
+      image: affordableFees,
       content: 'Random content for affordable fees facility. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.'
     }
   },
@@ -27,7 +30,7 @@ const facilities = [
     title: 'Best Services',
     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.',
     rightContent: {
-      image: 'https://via.placeholder.com/500',
+      image: bestService,
       content: 'Random content for best services facility. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.'
     }
   }
