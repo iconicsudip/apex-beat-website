@@ -770,6 +770,9 @@ header {
   height: auto;
   padding: 0.8em 2.4em;
 }
+footer{
+  padding:0!important;
+}
 .footer{
   display: flex;
     flex-direction: column;
