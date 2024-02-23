@@ -1,42 +1,14 @@
 import { Button, Form, Input } from 'antd'
 import styles from './contact-section.module.scss'
-import { GoogleMap, Marker, useLoadScript } from '@react-google-maps/api';
-import { useMemo } from 'react';
 
 export default function ContactSection() {
     const [contactForm] = Form.useForm();
-    const { isLoaded } = useLoadScript({
-        googleMapsApiKey: "AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg",
-    });
-    const defaultProps = {
-        center: {
-            lat: 22.7055561,
-            lng: 88.3378494
-        },
-        zoom: 13
-    };
-    const center = useMemo(() => ({ 
-        lat: defaultProps.center.lat,
-        lng: defaultProps.center.lng 
-    }), []);
     return (
         <div id="contact" className={styles.contactWrapper}>
             <div className={styles.contactArea}>
                 <div className="col-md-6">
                     <div className={styles.mapWrapper}>
-                        {isLoaded &&
-                            
-                            <GoogleMap
-                                mapContainerClassName={styles.mapWrapper}
-                                center={center}
-                                zoom={defaultProps.zoom}
-                            >
-                                <Marker
-                                    position={{ lat: defaultProps.center.lat, lng: defaultProps.center.lng }} 
-                                    icon={"http://maps.google.com/mapfiles/ms/icons/green-dot.png"}
-                                />
-                            </GoogleMap>
-                        }
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d799.7283465423922!2d88.3374058277573!3d22.705495913426766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d8089deaf41%3A0x3fa0e0afe5549239!2sGolden%20Tower!5e0!3m2!1sen!2sin!4v1708698001875!5m2!1sen!2sin" style={{border:0,width:"100%",height:"100%"}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div className="col-md-6">
