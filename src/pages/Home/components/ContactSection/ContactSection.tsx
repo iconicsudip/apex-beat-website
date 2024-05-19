@@ -1,14 +1,29 @@
-import { Button, Form, Input } from 'antd'
+import { Button, Form, Input, message } from 'antd'
 import styles from './contact-section.module.scss'
+import { I_ContactForm } from '../../../../interfaces/pages';
+// import { sendEmail } from '../../../../utils/functions';
+
+const LOCATION_MAP_URL = import.meta.env.VITE_APP_LOCATION_MAP_URL;
 
 export default function ContactSection() {
     const [contactForm] = Form.useForm();
+    const handleSubmitContact = async (values: I_ContactForm) => {
+        message.success('Your message has been sent successfully!');
+        // await sendEmail(values).then(() => {
+        //     message.success('Your message has been sent successfully!');
+        // }).catch((err) => {
+        //     message.error('An error occurred while sending your message!');
+        //     console.log(err);
+        // });
+        console.log(values);
+        contactForm.resetFields();
+    }
     return (
         <div id="contact" className={styles.contactWrapper}>
             <div className={styles.contactArea}>
                 <div className="col-md-6">
                     <div className={styles.mapWrapper}>
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d799.7283465423922!2d88.3374058277573!3d22.705495913426766!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f89d8089deaf41%3A0x3fa0e0afe5549239!2sGolden%20Tower!5e0!3m2!1sen!2sin!4v1708698001875!5m2!1sen!2sin" style={{border:0,width:"100%",height:"100%"}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src={LOCATION_MAP_URL} style={{ border: 0, width: "100%", height: "100%" }} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div className="col-md-6">
@@ -21,20 +36,24 @@ export default function ContactSection() {
                     <Form
                         form={contactForm}
                         layout="vertical"
+                        name="contact-form"
+                        onFinish={handleSubmitContact}
                     >
                         <Form.Item
                             name="name"
                             label={<h4>Name</h4>}
                             rules={[{ required: true, message: 'Please input your name!' }]}
                         >
-                            <Input placeholder="Name" />
+                            <Input placeholder="Name" size="large" />
                         </Form.Item>
                         <Form.Item
                             name="email"
                             label={<h4>Email</h4>}
-                            rules={[{ required: true, message: 'Please input your email!' }]}
+                            rules={[
+                                { type: 'email', message: 'Please input valid email!' }
+                            ]}
                         >
-                            <Input placeholder="Email" />
+                            <Input placeholder="Email" size="large" />
                         </Form.Item>
                         <Form.Item
                             name="phone"
@@ -44,7 +63,7 @@ export default function ContactSection() {
                                 { pattern: /^[0-9]+$/, message: 'Please input valid phone number!' }
                             ]}
                         >
-                            <Input placeholder="Phone" maxLength={10}/>
+                            <Input placeholder="Phone" maxLength={10} size="large" prefix="+91" />
                         </Form.Item>
                         <Form.Item
                             name="message"
@@ -53,10 +72,11 @@ export default function ContactSection() {
                         >
                             <Input.TextArea placeholder="Message"
                                 autoSize={{ minRows: 6, maxRows: 6 }}
+                                size="large"
                             />
                         </Form.Item>
                         <Form.Item>
-                            <Button type="primary" block htmlType='submit'>Leave a message</Button>
+                            <Button type="primary" block htmlType='submit' size="large">Leave a message</Button>
                         </Form.Item>
                     </Form>
                 </div>
