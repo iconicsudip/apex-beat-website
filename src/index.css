@@ -8,6 +8,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --primary: #2B3846;
   /* Gray */
   --gray-50: #f9fafb;
   --gray-100: #f3f4f6;
@@ -618,13 +620,13 @@ header {
   padding: 0 24px !important;
   padding-top: 16px !important;
   padding-bottom: 16px !important;
-  background: transparent !important;
+  /* background: transparent !important; */
   padding: 0 24px;
 
 }
 
 .bg-primary {
-  background: var(--blue-600) !important;
+  background: var(--primary) !important;
 }
 
 .bg-primary .menus {
@@ -660,7 +662,7 @@ header {
     display: flex;
       flex-direction: column;
       justify-content: space-between;
-      border-left: 2px solid var(--blue-600);
+      border-left: 2px solid var(--primary);
       transition: width 0.3s ease-in-out;
       overflow: hidden;
 }
@@ -674,7 +676,7 @@ header {
   font-size: 16px;
 }
 .slick-dots li.slick-active button:before{
-  color: var(--blue-700);
+  color: var(--primary);
   opacity: 1;
 }
 .slick-dots li button:before{
@@ -682,7 +684,7 @@ header {
 }
 .slick-dots li button:hover:before,
 .slick-dots li button:focus:before{
-  color: var(--blue-700);
+  color: var(--primary);
 }
 .sider_menus .menus{
   flex-direction: column;
@@ -707,22 +709,28 @@ header {
   font-size: 1.15em;
   font-weight: 600;
 }
-
+.sider_menus .menus li{
+  color: var(--primary);
+}
+.sider_menus .menus li:hover{
+  color: var(--gray-500);
+}
 .menus li {
   cursor: pointer;
   transition: all 0.1s ease;
   border-bottom: 2px solid transparent;
+  color: white;
 }
 .sider_btn{
   padding: 24px;
 }
 .menus li:hover {
-  border-bottom: 2px solid var(--blue-600);
-  color: var(--blue-600);
+  border-bottom: 2px solid var(--primary);
+  color: var(--gray-300);
 }
 
 .menus li.active {
-  border-bottom: 2px solid var(--blue-600);
+  border-bottom: 2px solid var(--primary);
 }
 
 .menus a {
@@ -759,7 +767,7 @@ header {
   content: "";
   width: 50%;
   height: 3px;
-  background: var(--blue-600);
+  background: var(--primary);
   left: 50%;
   bottom: -20%;
   transform: translate(-50%, 0);
@@ -794,5 +802,5 @@ footer{
 }
 .footerHeader{
   font-size: 1.5em;
-    color: var(--blue-800);
+    color: var(--primary);
 }

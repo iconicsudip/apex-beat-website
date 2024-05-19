@@ -36,7 +36,7 @@ function App() {
       <ConfigProvider
         theme={{
           token: {
-            colorPrimary: "#2563eb",
+            colorPrimary: "#2B3846",
             colorText: "var(--gray-700)",
             borderRadius: 6,
             fontFamily: "'Inter', sans-serif",
@@ -44,7 +44,7 @@ function App() {
           components: {
             Layout: {
               bodyBg: "url('/without-icon-bg.png')",
-              headerBg: "white",
+              headerBg: "#2B3846",
             },
           },
         }}
@@ -54,10 +54,10 @@ function App() {
             <div className={`header-wrapper ${headerChange}`}>
               <Layout.Header>
                 <div className={`header`}>
-                  <img src="https://via.placeholder.com/60" alt="" />
+                  <img src="apexbeat.svg" alt="logo" width={80} height={80} />
                   {isTablet || isMobile ? 
                     <>
-                      <Hamburger toggled={menuOpen} size={24} color={"var(--gray-800)"} onToggle={handleToggleMenu}/>
+                      <Hamburger toggled={menuOpen} size={24} color={menuOpen ? "var(--gray-800)" : "white"} onToggle={handleToggleMenu}/>
                       <div className={`sider_menus ${menuOpen ? 'menu_open' : 'menu_close'}`}>
                         <ul className="menus">
                           <Link to="/">
@@ -130,7 +130,7 @@ function App() {
                           </li>
                         </a>
                       </ul>
-                      <Button className="book_btn" style={{ margin: 0 }} type={"primary"} >Book an appointment</Button>
+                      <Button className="book_btn" style={{ margin: 0 }} type={"default"} >Book an appointment</Button>
                     </>
                   }
                 </div>
