@@ -85,7 +85,7 @@ export default function SpecialistsSection() {
           Our Specialists
         </h2>
         <p className='desc'>
-          Our team of specialists are here to help you with your health needs.
+          Our specialists doctors are here to help you with your health needs.
         </p>
       </div>
       <div className={styles.body}>

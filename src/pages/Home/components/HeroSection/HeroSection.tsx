@@ -27,12 +27,15 @@ export default function HeroSection() {
             <div className="col-md-6">
                 <div className={styles.heroSection}>
                     <div className={styles.subtitle}>
-                        <small>Apex Beat</small>
+                        <small>Premium Polyclinic at Konnagar</small>
                     </div>
-                    <h1 className={styles.title}>Welcome to the best medical center</h1>
-                    <p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.</p>
+                    <h1 className={styles.title}>Welcome to Apexbeat Clinic</h1>
+                    <p className={styles.description}>At our multi-site clinic, we put your health and well-being first by providing high-quality medical services. Our dedicated team of qualified physicians and specialists are committed to providing the best possible care in a comfortable and welcoming environment. We offer a wide range of medical services at affordable rates to meet all your healthcare needs.</p>
                 </div>
-                <Button className="book_btn" type="primary">Book an appointment</Button>
+                <a href='tel:+917439789989'>
+                    <Button className="book_btn" type="primary">Book an appointment</Button>
+
+                </a>
                 <ul className={styles.offers}>
                     {offers.map(offer => (
                         <li key={offer.id}>

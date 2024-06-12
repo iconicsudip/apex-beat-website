@@ -618,8 +618,8 @@ h6 {
 header {
   height: auto !important;
   padding: 0 24px !important;
-  padding-top: 16px !important;
-  padding-bottom: 16px !important;
+padding-top: 8px !important;
+  padding-bottom: 8px !important;
   /* background: transparent !important; */
   padding: 0 24px;
 
@@ -706,7 +706,7 @@ header {
   list-style: none;
   gap: 24px;
   color: var(--gray-900);
-  font-size: 1.15em;
+  font-size: 1em;
   font-weight: 600;
 }
 .sider_menus .menus li{

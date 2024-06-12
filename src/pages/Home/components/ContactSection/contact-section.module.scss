@@ -7,13 +7,15 @@
 
     .contactArea {
         display: flex;
-flex-wrap: wrap;
+        flex-wrap: wrap;
+
         .mapWrapper {
             width: 100%;
             height: 100%;
+
             @media screen and (max-width: 767px) {
                 width: 100%;
-                height:400px;
+                height: 400px;
             }
         }
     }
@@ -37,5 +39,15 @@ flex-wrap: wrap;
     .contactDesc {
         font-size: 1.1em;
         color: var(--gray-600);
+    }
+
+    .contact_details {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @media screen and (min-width:769px) {
+            padding: 4px 20px;
+        }
     }
 }

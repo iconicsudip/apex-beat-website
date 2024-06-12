@@ -19,7 +19,7 @@ export default function Specialist({ specialist,maxLength }: Props) {
     return (
         <div className={styles.specialist}>
             <Link to={`/specialists/${specialist.slug}`} >
-                <img src={specialist.image} alt={specialist.name} />
+                {/* <img src={specialist.image} alt={specialist.name} /> */}
                 <div className={styles.doctor}>
                     <div>
                         <h3 className={styles.name}>{specialist.name}</h3>

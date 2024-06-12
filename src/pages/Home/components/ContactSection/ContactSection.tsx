@@ -1,23 +1,23 @@
-import { Button, Form, Input, message } from 'antd'
+// import { Button, Form, Input, message } from 'antd'
 import styles from './contact-section.module.scss'
-import { I_ContactForm } from '../../../../interfaces/pages';
+// import { I_ContactForm } from '../../../../interfaces/pages';
 // import { sendEmail } from '../../../../utils/functions';
 
 const LOCATION_MAP_URL = import.meta.env.VITE_APP_LOCATION_MAP_URL;
 
 export default function ContactSection() {
-    const [contactForm] = Form.useForm();
-    const handleSubmitContact = async (values: I_ContactForm) => {
-        message.success('Your message has been sent successfully!');
-        // await sendEmail(values).then(() => {
-        //     message.success('Your message has been sent successfully!');
-        // }).catch((err) => {
-        //     message.error('An error occurred while sending your message!');
-        //     console.log(err);
-        // });
-        console.log(values);
-        contactForm.resetFields();
-    }
+    // const [contactForm] = Form.useForm();
+    // const handleSubmitContact = async (values: I_ContactForm) => {
+    //     message.success('Your message has been sent successfully!');
+    //     // await sendEmail(values).then(() => {
+    //     //     message.success('Your message has been sent successfully!');
+    //     // }).catch((err) => {
+    //     //     message.error('An error occurred while sending your message!');
+    //     //     console.log(err);
+    //     // });
+    //     console.log(values);
+    //     contactForm.resetFields();
+    // }
     return (
         <div id="contact" className={styles.contactWrapper}>
             <div className={styles.contactArea}>
@@ -30,10 +30,12 @@ export default function ContactSection() {
                     <div className={styles.contactHeader}>
                         <h2 className={styles.contactHeading}>Contact Us</h2>
                         <p className={styles.contactDesc}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec venenatis, turpis vel hendrerit interdum, dui ligula ultricies purus, sed posuere libero erat vitae justo. Sed nec felis ut massa volutpat dictum. Nulla nec purus et libero sollicitudin tincidunt
+                            Get the best out of our multi-hospital healthcare experience. Whether you need routine treatment, specialty treatment, or just a consultation, we are here to serve you. Your health and well-being is our top priority, and we are dedicated to providing you with the best possible treatment.
+                            <br />
+                            Please contact us for more information or to contact us. We look forward to welcoming you to our polyclinic and offering you exceptional healthcare services.
                         </p>
                     </div>
-                    <Form
+                    {/* <Form
                         form={contactForm}
                         layout="vertical"
                         name="contact-form"
@@ -45,15 +47,6 @@ export default function ContactSection() {
                             rules={[{ required: true, message: 'Please input your name!' }]}
                         >
                             <Input placeholder="Name" size="large" />
-                        </Form.Item>
-                        <Form.Item
-                            name="email"
-                            label={<h4>Email</h4>}
-                            rules={[
-                                { type: 'email', message: 'Please input valid email!' }
-                            ]}
-                        >
-                            <Input placeholder="Email" size="large" />
                         </Form.Item>
                         <Form.Item
                             name="phone"
@@ -78,7 +71,22 @@ export default function ContactSection() {
                         <Form.Item>
                             <Button type="primary" block htmlType='submit' size="large">Leave a message</Button>
                         </Form.Item>
-                    </Form>
+                    </Form> */}
+
+                    <div className={styles.contact_details}>
+                        <div>
+                            <h3>Address</h3>
+                            <p>20, Sarat Chatterjee Rd, near HIRALAL PAUL GIRLS HIGH SCHOOL, Nabagram, Konnagar, Nabagram Colony, West Bengal 712246</p>
+                        </div>
+                        <div>
+                            <h3>Email</h3>
+                            <p><a href='mailto:apexbeat.clinic@gmail.com'>apexbeat.clinic@gmail.com</a></p>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p><a href='tel:+917439789989'>+91 7439789989</a></p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

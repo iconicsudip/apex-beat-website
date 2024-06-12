@@ -10,28 +10,28 @@ const facilities = [
   {
     id: 1,
     title: 'Qualified Doctors',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.',
+    description: 'Our team consists of highly qualified and experienced doctors who are experts in their field. They are dedicated to providing personalized care and ensuring the best possible outcomes for our patients.',
     rightContent: {
       image: qualfiedDoctors,
-      content: 'Right content for qualified doctors facility. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.'
+      content: 'A group of smiling doctors in white, displaying diversity and expertise. Each physician is an expert in their field, ensuring that patients receive the care they desire and the best possible outcomes.'
     }
   },
   {
     id: 2,
-    title: 'Affordable Fees',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.',
+    title: 'Affordability',
+    description: 'We believe that health care should be accessible to all. Our services are priced affordably so that you receive the best possible care without having to worry about high costs.',
     rightContent: {
       image: affordableFees,
-      content: 'Random content for affordable fees facility. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.'
+      content: 'A price tag symbolizing affordability, accompanied by means of a smiling circle of relatives. Our dedication to on hand healthcare is contemplated in our in your price range offerings, ensuring that excellent care is within reach for all.'
     }
   },
   {
     id: 3,
     title: 'Best Services',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.',
+    description: 'We are proud to offer a comprehensive range of medical services. From routine checkups to specialized treatments, our state-of-the-art facilities and advanced technology ensure the highest quality of care.',
     rightContent: {
       image: bestService,
-      content: 'Random content for best services facility. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.'
+      content: 'A modern-day clinical facility with superior system and a welcoming surroundings. From recurring test-usato specialised remedies, our latest facilities and cutting-edge technology make sure that sufferers acquire the best possible care.'
     }
   }
 ]
@@ -40,7 +40,7 @@ export default function FacilitiesSection() {
   useEffect(() => {
     const facilityTimer = setInterval(() => {
       setCurrentFacility(prev => prev === facilities.length ? 1 : prev + 1)
-    }, 5000)
+    }, 3000)
     return () => {
       clearInterval(facilityTimer)
     }
@@ -50,9 +50,15 @@ export default function FacilitiesSection() {
       <div className="col-md-6">
         <div className={styles.left_wrapper}>
           <div className={styles.header}>
-            <h1 className={styles.title}>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h1>
-            <p className={styles.description}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus ab unde minima laborum dolorum illum provident placeat amet? Est, maiores quos illo nam beatae similique alias placeat saepe dolor accusantium.</p>
-            <Button className="book_btn" type="primary">Book an appointment</Button>
+            <h1 className={styles.title}>
+              Our Facilities
+            </h1>
+            <p className={styles.description}>
+              We offer a wide range of services to meet your health needs. Our facilities are designed to provide the best possible care in a comfortable and welcoming environment.
+            </p>
+            <a href='tel:+917439789989'>
+              <Button className="book_btn" type="primary">Book an appointment</Button>
+            </a>
           </div>
           <div className={styles.facilities_wrapper}>
             {facilities.map((facility) => {

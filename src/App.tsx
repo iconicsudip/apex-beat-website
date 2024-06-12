@@ -9,7 +9,7 @@ import { Squash as Hamburger } from "hamburger-react";
 function App() {
   const [headerChange, setHeaderChange] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false)
-  const {isTablet,isMobile} = useResponsive()
+  const { isTablet, isMobile } = useResponsive()
   useEffect(() => {
     const handleScroll = () => {
       const headerHeight = 96; // Change this value to your header height
@@ -54,10 +54,10 @@ function App() {
             <div className={`header-wrapper ${headerChange}`}>
               <Layout.Header>
                 <div className={`header`}>
-                  <img src="apexbeat.svg" alt="logo" width={80} height={80} />
-                  {isTablet || isMobile ? 
+                  <img src="apexbeat.svg" alt="logo" width={50} height={50} />
+                  {isTablet || isMobile ?
                     <>
-                      <Hamburger toggled={menuOpen} size={24} color={menuOpen ? "var(--gray-800)" : "white"} onToggle={handleToggleMenu}/>
+                      <Hamburger toggled={menuOpen} size={24} color={menuOpen ? "var(--gray-800)" : "white"} onToggle={handleToggleMenu} />
                       <div className={`sider_menus ${menuOpen ? 'menu_open' : 'menu_close'}`}>
                         <ul className="menus">
                           <Link to="/">
@@ -92,11 +92,16 @@ function App() {
                           </a>
                         </ul>
                         <div className="sider_btn">
-                          <Button block className="book_btn" style={{ margin: 0 }} type={"primary"} >Book an appointment</Button>
+                            <a href='tel:+917439789989'>
+                          <Button block className="book_btn" style={{ margin: 0 }} type={"primary"} >
+
+                            Book an appointment
+                          </Button>
+                            </a>
                         </div>
                       </div>
                     </>
-                  : 
+                    :
                     <>
                       <ul className="menus">
                         <Link to="/">
@@ -130,7 +135,9 @@ function App() {
                           </li>
                         </a>
                       </ul>
-                      <Button className="book_btn" style={{ margin: 0 }} type={"default"} >Book an appointment</Button>
+                      <a href='tel:+917439789989'>
+                        <Button className="book_btn" style={{ margin: 0 }} type={"default"} >Book an appointment</Button>
+                        </a>
                     </>
                   }
                 </div>
@@ -141,28 +148,51 @@ function App() {
             </Layout.Content>
             <Layout.Footer>
               <div className="footer">
-                  <div className="footerContent">
-                    <div className="col-lg-3 col-md-6">
-                      <h3 className="footerHeader">Company</h3>
-                      <ul>
-                        <li>About</li>
-                        <li>Services</li>
-                        <li>Specialists</li>
-                        <li>Testimonials</li>
-                        <li>Contact</li>
-                      </ul>
-                    </div>
-                    <div className="col-lg-3 col-md-6">
-                      <h3 className="footerHeader">Services</h3>
-                      <ul>
-                        <li>Cardiology</li>
-                        <li>Dentistry</li>
-                        <li>Neurology</li>
-                        <li>Orthopedics</li>
-                        <li>Urology</li>
-                      </ul>
-                    </div>
-                    <div className="col-lg-3 col-md-6">
+                <div className="footerContent">
+                  <div className="col-lg-4 col-md-6">
+                    <h3 className="footerHeader">Company</h3>
+                    <ul>
+                      <li>
+                        <a href="#about">
+                          About
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#services">
+                          Services
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#specialists">
+                          Specialists
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#testimonials">
+                          Testimonials
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#contact">
+                          Contact
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className="col-lg-4 col-md-6">
+                    <h3 className="footerHeader">Services</h3>
+                    <ul>
+                      <li>
+                        Gynaecologist
+                      </li>
+                      <li>General Medicine
+                      </li>
+                      <li>Orthopedics</li>
+                      <li>Dermetology</li>
+                      <li>Pediatrics</li>
+                    </ul>
+                  </div>
+                  {/* <div className="col-lg-4 col-md-6">
                       <h3 className="footerHeader">Specialists</h3>
                       <ul>
                         <li>Dr. John Doe</li>
@@ -171,16 +201,16 @@ function App() {
                         <li>Dr. Sarah Roe</li>
                         <li>Dr. Michael Smith</li>
                       </ul>
-                    </div>
-                    <div className="col-lg-3 col-md-6">
-                      <h3 className="footerHeader">Contact</h3>
-                      <ul>
-                        <li>Address: 1234 Street Name, City Name, United States</li>
-                        <li>Phone: +123 456 7890</li>
-                        <li>Email: test@gmail.com</li>
-                      </ul>
-                    </div>
+                    </div> */}
+                  <div className="col-lg-4 col-md-6">
+                    <h3 className="footerHeader">Contact</h3>
+                    <ul>
+                      <li><b>Address:</b> 20, Sarat Chatterjee Rd, near HIRALAL PAUL GIRLS HIGH SCHOOL, Nabagram, Konnagar, Nabagram Colony, West Bengal 712246</li>
+                      <li><b>Phone:</b> <a href='tel:+917439789989'>+91 7439789989</a></li>
+                      <li><b>Email:</b> <a href='mailto:apexbeat.clinic@gmail.com'>apexbeat.clinic@gmail.com</a></li>
+                    </ul>
                   </div>
+                </div>
                 <div className="footerCopy">
                   <p>© {new Date().getFullYear()} Your Company. All Rights Reserved</p>
                 </div>
