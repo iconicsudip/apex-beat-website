@@ -4,34 +4,82 @@ import Slider from 'react-slick'
 
 const specialists = [
   {
-    name: 'Dr. John Doe',
-    degree: 'MBBS, MD, PhD',
-    specialty: 'Cardiologist',
-    description: 'Cardiology is a branch of medicine that deals with the disorders of the heart as well as some parts of the circulatory system.',
+    name: 'Dr. Achyut Pal',
+    degree: 'MBBS, MD (Internal Medicine)',
+    specialty: 'General Physician',
+    description: 'General physicians are highly trained specialists who provide a range of non-surgical health care to adult patients.',
     image: 'https://via.placeholder.com/300',
-    slug: 'dr-john-doe'
+    slug: 'dr-achyut-pal'
   },
   {
-    name: 'Dr. Jane Doe',
-    degree: 'MD, PhD',
-    specialty: 'Dermatologist',
-    description: 'Dermatology is the branch of medicine dealing with the skin, nails, hair and its diseases.',
+    name: 'Dr. Sayandeep Adhya',
+    degree: 'MBBS, MD, CCEBDM (Diabetes)',
+    specialty: 'General Physician',
+    description: 'General physicians are highly trained specialists who provide a range of non-surgical health care to adult patients.',
     image: 'https://via.placeholder.com/300',
     slug: 'dr-jane-doe'
   },
   {
-    name: 'Dr. John Doe',
-    degree: 'MBBS, MD, PhD',
-    specialty: 'Cardiologist',
-    description: 'Cardiology is a branch of medicine that deals with the disorders of the heart as well as some parts of the circulatory system.',
+    name: 'Dr. A.K.Singh',
+    degree: 'MBBS (WBUHS)',
+    specialty: 'General Physician',
+    description: 'General physicians are highly trained specialists who provide a range of non-surgical health care to adult patients.',
     image: 'https://via.placeholder.com/300',
     slug: 'dr-john-doe'
-  },
-  {
-    name: 'Dr. Jane Doe',
-    degree: 'MD, PhD',
-    specialty: 'Dermatologist',
-    description: 'Dermatology is the branch of medicine dealing with the skin, nails, hair and its diseases.',
+  }
+  ,{
+    name: 'Dr. V.K.Singh',
+    degree: 'MBBS',
+    specialty: 'General Physician',
+    description: 'General physicians are highly trained specialists who provide a range of non-surgical health care to adult patients.',
+    image: 'https://via.placeholder.com/300',
+    slug: 'dr-jane-doe'
+  }
+  ,{
+    name: 'Dr. Kakali Paul',
+    degree: 'MBBS, DGO, (Infertility Specialist & Laproscopic Surgeon) ',
+    specialty: 'Gynaecologist',
+    description: 'Gynaecologists are highly trained specialists who provide a range of non-surgical health care to adult patients.',
+    image: 'https://via.placeholder.com/300',
+    slug: 'dr-jane-doe'
+  }
+  ,{
+    name: 'Dr. Siddharth Gupta',
+    degree: 'MBBS, MS (Gold Medallist), Fellowship in Spine Surgery, Fellowship in joint replacement, Arthoscopy(UK)',
+    specialty: 'Orthopedic',
+    description: 'Orthopedic are highly trained specialists who provide a range of non-surgical health care to adult patients.',
+    image: 'https://via.placeholder.com/300',
+    slug: 'dr-jane-doe'
+  }
+  ,{
+    name: 'Dr. Avijit Mitra',
+    degree: 'MBBS, DNB',
+    specialty: 'Pediatric Surgeon',
+    description: 'Pediatric Surgeon are highly trained specialists who provide a range of non-surgical health care to adult patients.',
+    image: 'https://via.placeholder.com/300',
+    slug: 'dr-jane-doe'
+  }
+  ,{
+    name: 'Dr. Subhajit Sadhukhan',
+    degree: 'MBBS (HONS), MD (AIIMS)',
+    specialty: 'Skin Specialist',
+    description: 'Skin Specialist are highly trained specialists who provide a range of non-surgical health care to adult patients.',
+    image: 'https://via.placeholder.com/300',
+    slug: 'dr-jane-doe'
+  }
+  ,{
+    name: 'Dr. Debanjoy Goswami',
+    degree: 'MBBS, PGDAC, MIM, FFA (USA)',
+    specialty: 'Skin Specialist',
+    description: 'Skin Specialist are highly trained specialists who provide a range of non-surgical health care to adult patients.',
+    image: 'https://via.placeholder.com/300',
+    slug: 'dr-jane-doe'
+  }
+  ,{
+    name: 'Dr. Udayan Dasgupta',
+    degree: 'MBBS (Cal), DIPCARD (Cal)',
+    specialty: 'Cardiologist',
+    description: 'Cardiologist are highly trained specialists who provide a range of non-surgical health care to adult patients.',
     image: 'https://via.placeholder.com/300',
     slug: 'dr-jane-doe'
   }

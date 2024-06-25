@@ -3,7 +3,7 @@ import HeroSection from './components/HeroSection';
 import ServicesSection from './components/ServicesSection';
 import FacilitiesSection from './components/FacilitiesSection';
 import SpecialistsSection from './components/SpecialistsSection';
-import TestimonialsSection from './components/TestimonialsSection';
+// import TestimonialsSection from './components/TestimonialsSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import { useEffect } from 'react';
@@ -21,7 +21,7 @@ export default function Home() {
             <ServicesSection />
             <FacilitiesSection />
             <SpecialistsSection />
-            <TestimonialsSection />
+            {/* <TestimonialsSection /> */}
             <ContactSection />
         </div>
     )

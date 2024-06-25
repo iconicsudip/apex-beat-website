@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import styles from './specialist.module.scss'
 interface Props {
     specialist: {
@@ -18,7 +18,7 @@ export default function Specialist({ specialist,maxLength }: Props) {
     const minimumSizeDescription = specialist.description.slice(0, maxLength);
     return (
         <div className={styles.specialist}>
-            <Link to={`/specialists/${specialist.slug}`} >
+            {/* <Link to={`/specialists/${specialist.slug}`} > */}
                 {/* <img src={specialist.image} alt={specialist.name} /> */}
                 <div className={styles.doctor}>
                     <div>
@@ -35,7 +35,7 @@ export default function Specialist({ specialist,maxLength }: Props) {
                         ))}
                     </div>
                 </div>
-            </Link>
+            {/* </Link> */}
         </div>
     )
 }
