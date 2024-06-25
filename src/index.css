@@ -804,3 +804,19 @@ footer{
   font-size: 1.5em;
     color: var(--primary);
 }
+
+.wp-wrapper{
+  position: fixed;
+    bottom: 1rem;
+    z-index: 9;
+    right: 1rem;
+    width: 60px;
+    height: 60px;
+    /* border-radius: 50%; */
+    overflow: hidden;
+}
+
+.wp-wrapper img{
+  width: 100%;
+  object-fit: fill;
+}

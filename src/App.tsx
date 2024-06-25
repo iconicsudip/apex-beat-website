@@ -145,6 +145,11 @@ function App() {
             </div>
             <Layout.Content>
               <Outlet />
+              <div className="wp-wrapper">
+                <a aria-label="Chat on WhatsApp" href="https://wa.me/7439789989">
+                    <img src="./wplogo.png" alt="Chat in WhatsApp" />
+                </a>
+              </div>
             </Layout.Content>
             <Layout.Footer>
               <div className="footer">
